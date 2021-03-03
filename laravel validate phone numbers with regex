@@ -1,0 +1,11 @@
+/*
+** validate the phone numbers using regular expression
+** Yemen Mobile, MTN, Sabafon
+*/
+
+return Validator::make($data, [
+    'name' => 'required|string|max:255',
+    // 'email' => 'required|string|email|max:255|unique:users',
+    'phone' => 'regex:/^((71)|(73)|(77))[0-9]{7}/',
+    'password' => 'required|string|min:6|confirmed',
+]);
